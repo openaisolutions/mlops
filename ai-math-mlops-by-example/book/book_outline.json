@@ -1,0 +1,41 @@
+{
+  "chapters": [
+    {"id": 1, "title": "Singular Value Decomposition", "sections": ["Concept", "Implementation", "Applications"], "equations": [1,2,3]},
+    {"id": 2, "title": "Linear Regression", "sections": ["Concept", "Implementation", "Applications"], "equations": [4,5]},
+    {"id": 3, "title": "Gradient Descent", "sections": ["Concept", "Implementation", "Applications"], "equations": [6,7,8]},
+    {"id": 4, "title": "Probability Basics", "sections": ["Concept", "Implementation", "Applications"], "equations": [9,10,11]},
+    {"id": 5, "title": "Logistic Regression", "sections": ["Concept", "Implementation", "Applications"], "equations": [12,13,14]},
+    {"id": 6, "title": "Neural Networks", "sections": ["Concept", "Implementation", "Applications"], "equations": [15,16,17]},
+    {"id": 7, "title": "Unsupervised Learning", "sections": ["Concept", "Implementation", "Applications"], "equations": [18,19]},
+    {"id": 8, "title": "Graph Algorithms", "sections": ["Concept", "Implementation", "Applications"], "equations": [20]},
+    {"id": 9, "title": "Sequence Models", "sections": ["Concept", "Implementation", "Applications"], "equations": [21,22,23,24]},
+    {"id": 10, "title": "MLOps Pipeline", "sections": ["Concept", "Implementation", "Applications"], "equations": [25]}
+  ],
+  "equations": [
+    {"id": 1, "chapter": 1, "name": "Singular Value Decomposition", "equation": "A = U Σ V^T"},
+    {"id": 2, "chapter": 1, "name": "Matrix Inversion", "equation": "A^{-1}"},
+    {"id": 3, "chapter": 1, "name": "Determinant", "equation": "det(A)"},
+    {"id": 4, "chapter": 2, "name": "Normal Equation", "equation": "θ = (X^T X)^{-1} X^T y"},
+    {"id": 5, "chapter": 2, "name": "Gradient of Linear Regression", "equation": "∇J = (1/m) X^T (Xθ - y)"},
+    {"id": 6, "chapter": 3, "name": "Gradient Descent Update", "equation": "θ := θ - α∇J"},
+    {"id": 7, "chapter": 3, "name": "Chain Rule", "equation": "∂z/∂x = ∂z/∂y ∂y/∂x"},
+    {"id": 8, "chapter": 3, "name": "Gradient", "equation": "∇f(x)"},
+    {"id": 9, "chapter": 4, "name": "Bayes Theorem", "equation": "P(A|B) = P(B|A) P(A)/P(B)"},
+    {"id": 10, "chapter": 4, "name": "Expectation", "equation": "E[X] = Σ x p(x)"},
+    {"id": 11, "chapter": 4, "name": "Variance", "equation": "Var(X) = E[(X - μ)^2]"},
+    {"id": 12, "chapter": 5, "name": "Sigmoid Function", "equation": "σ(z) = 1/(1 + e^{-z})"},
+    {"id": 13, "chapter": 5, "name": "Cross Entropy Loss", "equation": "L = -Σ y log(ŷ)"},
+    {"id": 14, "chapter": 5, "name": "Softmax", "equation": "softmax(z_i) = e^{z_i}/Σ e^{z_j}"},
+    {"id": 15, "chapter": 6, "name": "Backpropagation", "equation": "δ^l = (W^{l+1})^T δ^{l+1} * f'(z^l)"},
+    {"id": 16, "chapter": 6, "name": "ReLU", "equation": "ReLU(x) = max(0, x)"},
+    {"id": 17, "chapter": 6, "name": "Convolution", "equation": "(X * W)[i,j] = Σ X[i+m, j+n] W[m,n]"},
+    {"id": 18, "chapter": 7, "name": "k-Means Update", "equation": "μ_i = (1/|S_i|) Σ x_j"},
+    {"id": 19, "chapter": 7, "name": "PCA Transformation", "equation": "Z = XW"},
+    {"id": 20, "chapter": 8, "name": "PageRank", "equation": "r = α A r + (1-α) v"},
+    {"id": 21, "chapter": 9, "name": "RNN Hidden State", "equation": "h_t = f(W x_t + U h_{t-1})"},
+    {"id": 22, "chapter": 9, "name": "LSTM Cell", "equation": "c_t = f_t * c_{t-1} + i_t * g_t"},
+    {"id": 23, "chapter": 9, "name": "Attention Weights", "equation": "α_{ij} = softmax(e_{ij})"},
+    {"id": 24, "chapter": 9, "name": "Q-learning Update", "equation": "Q(s,a) ← Q(s,a) + α[r + γ max Q(s',a') - Q(s,a)]"},
+    {"id": 25, "chapter": 10, "name": "A/B Test t-Statistic", "equation": "t = (x̄_A - x̄_B)/√(s_A^2/n_A + s_B^2/n_B)"}
+  ]
+}
