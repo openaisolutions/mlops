@@ -1,0 +1,69 @@
+format: jb-book
+root: intro
+parts:
+  - caption: Part I Foundations
+    chapters:
+      - file: part1_foundations/linear-algebra
+        sections:
+          - file: part1_foundations/linear-algebra/intro.md
+          - file: part1_foundations/linear-algebra/practice.md
+      - file: part1_foundations/calculus
+        sections:
+          - file: part1_foundations/calculus/intro.md
+          - file: part1_foundations/calculus/practice.md
+      - file: part1_foundations/probability
+        sections:
+          - file: part1_foundations/probability/intro.md
+          - file: part1_foundations/probability/practice.md
+      - file: part1_foundations/optimization
+        sections:
+          - file: part1_foundations/optimization/intro.md
+          - file: part1_foundations/optimization/practice.md
+      - file: part1_foundations/statistics
+        sections:
+          - file: part1_foundations/statistics/intro.md
+          - file: part1_foundations/statistics/practice.md
+  - caption: Part II Pipelines
+    chapters:
+      - file: part2_pipeline/data-engineering
+        sections:
+          - file: part2_pipeline/data-engineering/intro.md
+          - file: part2_pipeline/data-engineering/practice.md
+      - file: part2_pipeline/model-training
+        sections:
+          - file: part2_pipeline/model-training/intro.md
+          - file: part2_pipeline/model-training/practice.md
+      - file: part2_pipeline/model-evaluation
+        sections:
+          - file: part2_pipeline/model-evaluation/intro.md
+          - file: part2_pipeline/model-evaluation/practice.md
+      - file: part2_pipeline/packaging
+        sections:
+          - file: part2_pipeline/packaging/intro.md
+          - file: part2_pipeline/packaging/practice.md
+      - file: part2_pipeline/ci-cd
+        sections:
+          - file: part2_pipeline/ci-cd/intro.md
+          - file: part2_pipeline/ci-cd/practice.md
+  - caption: Part III Production
+    chapters:
+      - file: part3_production/monitoring
+        sections:
+          - file: part3_production/monitoring/intro.md
+          - file: part3_production/monitoring/practice.md
+      - file: part3_production/scaling
+        sections:
+          - file: part3_production/scaling/intro.md
+          - file: part3_production/scaling/practice.md
+      - file: part3_production/governance
+        sections:
+          - file: part3_production/governance/intro.md
+          - file: part3_production/governance/practice.md
+      - file: part3_production/reliability
+        sections:
+          - file: part3_production/reliability/intro.md
+          - file: part3_production/reliability/practice.md
+      - file: part3_production/future-directions
+        sections:
+          - file: part3_production/future-directions/intro.md
+          - file: part3_production/future-directions/practice.md

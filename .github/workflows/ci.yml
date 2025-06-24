@@ -36,6 +36,11 @@ jobs:
         run: pytest --nbmake -p no:warnings
       - name: Build Jupyter Book
         run: jupyter-book build docs
+      - name: Progress Badge
+        run: |
+          python scripts/progress.py
+          mkdir -p docs/_build/html/badges
+          cp badges/progress.json docs/_build/html/badges/progress.json
       - name: Upload Book Artifact
         uses: actions/upload-artifact@v4
         with:
