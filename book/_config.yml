@@ -1,0 +1,4 @@
+title: AI Math & MLOps by Example
+author: OpenAI Solutions
+html_theme: sphinx_book_theme
+latex_engine: xelatex
