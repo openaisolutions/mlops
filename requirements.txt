@@ -1,0 +1,8 @@
+jupyter-book~=1.0
+nbmake~=1.5
+pytest~=8.0
+black~=24.3
+ruff~=0.4
+
+# Project dependencies
+-r ai-math-mlops-by-example/requirements.txt

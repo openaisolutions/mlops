@@ -1,5 +1,5 @@
-import sys
 from pathlib import Path
+import sys
 import numpy as np
 
 # Ensure utils package is on path
