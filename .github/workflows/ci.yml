@@ -29,7 +29,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
       - name: Ruff Lint
-        run: ruff . --select=E,F,I
+        run: ruff check . --select=E,F,I
       - name: Black Check
         run: black --check .
       - name: Pytest with nbmake
