@@ -73,6 +73,16 @@ class MeasurementTests(unittest.TestCase):
                 len(json.loads((Path(tmp) / "SHA256SUMS.json").read_text())), 3
             )
 
+    def test_unrecognized_metadata_is_not_exported(self):
+        self.data["metadata"]["api_key"] = "example-secret-not-for-reports"
+        result = measure(self.data, "digest")
+        self.assertNotIn("example-secret-not-for-reports", json.dumps(result))
+
+    def test_conflicting_source_scope_is_rejected(self):
+        self.data["facts"]["labor"]["csci_id"] = "OTHER-CSCI"
+        with self.assertRaisesRegex(ValueError, "scope mismatch"):
+            measure(self.data, "digest")
+
 
 if __name__ == "__main__":
     unittest.main()

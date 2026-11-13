@@ -23,8 +23,24 @@ def number(value, name):
 
 
 def measure(document, digest):
-    metadata = document.get("metadata", {})
+    supplied_metadata = document.get("metadata", {})
+    allowed_metadata = {
+        "synthetic",
+        "csci_id",
+        "release_id",
+        "measurement_policy",
+        "periods",
+        "baseline_id",
+        "reporting_period",
+    }
+    metadata = {k: v for k, v in supplied_metadata.items() if k in allowed_metadata}
     facts = document.get("facts", {})
+    for section in facts.values():
+        if not isinstance(section, dict):
+            raise ValueError("Fact sections must be objects")
+        for key in ("csci_id", "release_id", "baseline_id", "reporting_period"):
+            if key in section and section[key] != metadata.get(key):
+                raise ValueError(f"Fact scope mismatch: {key}")
     rows = []
 
     def metric(
@@ -57,8 +73,8 @@ def measure(document, digest):
 
     tests = facts.get("tests", {})
     if all(k in tests for k in ("planned", "executed", "passed", "failed")):
-        for k, v in tests.items():
-            number(v, k)
+        for k in ("planned", "executed", "passed", "failed"):
+            number(tests[k], k)
         if (
             tests["executed"] > tests["planned"]
             or tests["passed"] + tests["failed"] != tests["executed"]
