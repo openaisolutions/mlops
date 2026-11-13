@@ -1,0 +1,88 @@
+{
+  "metadata": {
+    "synthetic": true,
+    "csci_id": "CSCI-A",
+    "release_id": "R1",
+    "measurement_policy": "demo-1.0",
+    "periods": [
+      "2026-09-18",
+      "2026-09-25",
+      "2026-10-02",
+      "2026-10-09",
+      "2026-10-16",
+      "2026-10-23"
+    ]
+  },
+  "facts": {
+    "size": {
+      "baseline_a": "sha-opening",
+      "baseline_b": "sha-closing",
+      "delivered_esloc": 10000,
+      "incremental_esloc": 410,
+      "uccg_job_id": 721
+    },
+    "defects": {
+      "verified_eligible": 8,
+      "jira_issue_keys": [
+        "DR-101",
+        "DR-102",
+        "DR-103",
+        "DR-104",
+        "DR-105",
+        "DR-106",
+        "DR-107",
+        "DR-108"
+      ]
+    },
+    "labor": {
+      "actual_engineering_hours": 100,
+      "corrective_hours": 12,
+      "csci_id": "CSCI-A"
+    },
+    "tests": {
+      "planned": 100,
+      "executed": 75,
+      "passed": 68,
+      "failed": 7
+    },
+    "coverage": {
+      "covered_lines": 902,
+      "lines_to_cover": 1000
+    },
+    "requirements": {
+      "opening": 160,
+      "added": 3,
+      "removed": 2,
+      "materially_modified": 20
+    },
+    "schedule": {
+      "baseline_finish": "2026-11-17",
+      "forecast_finish": "2026-11-20"
+    }
+  },
+  "derived": {
+    "defect_density_per_kesloc": 0.8,
+    "productivity_esloc_per_hour": 4.1,
+    "test_execution_pct": 75,
+    "test_pass_pct": 68,
+    "line_coverage_pct": 90.2,
+    "requirements_volatility_pct": 15.625,
+    "rework_efficiency_fixes_per_hour": 0.25,
+    "rework_hours_share_pct": 12
+  },
+  "lineage": {
+    "join_keys": [
+      "csci_id",
+      "release_id",
+      "reporting_period",
+      "baseline_id"
+    ],
+    "evidence": [
+      "pipeline_job_id",
+      "artifact_digest",
+      "jira_issue_key",
+      "approved_hours_export_id"
+    ],
+    "caveat": "Synthetic examples; rework numerator is three verified fixes, distinct from eight eligible defects."
+  }
+}
